@@ -2,16 +2,16 @@ import * as React from "react";
 import Button from "../Button";
 
 interface PageProps {
-  image: string;
-  name: string;
-  description: string;
-  price: number;
+	products?: {},
+  image: string,
+  name: string,
+  description: string,
+  price: number,
 }
 
+// THESE PROPS ARE UNDEFINED >:(
 const Page: React.FC<PageProps> = (props) => {
-
-	
-  return (
+	return (
     <section className="product">
       <section>
         <img src={props.image} />

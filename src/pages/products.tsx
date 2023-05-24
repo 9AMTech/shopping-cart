@@ -4,10 +4,9 @@ import Card from "../components/Product/Card";
 import { FakeStoreData } from "../components/Layout/Layout";
 import { HeadFC } from "gatsby";
 import {RouteComponentProps } from '@reach/router';
-import {Router} from '@reach/router';
 
 
-const ProductsPage : React.FC<RouteComponentProps> = (props) => {
+const ProductsPage : React.FC<RouteComponentProps> = () => {
   const [products, setProducts] = useState<FakeStoreData[]>([]);
 
   useEffect(() => {
@@ -33,6 +32,7 @@ const ProductsPage : React.FC<RouteComponentProps> = (props) => {
         {products.map((product) => {
           return (
               <Card
+								products={products}
 								id={product.id}
                 name={product.title}
                 image={product.image}
